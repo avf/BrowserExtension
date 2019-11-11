@@ -1,5 +1,5 @@
 {
-	"manifest_version": 2,
+	"manifest_version": 3,
 	"version": "2.9.4",
 	"author": "Steam Database",
 	"name": "Steam Database",
@@ -22,18 +22,17 @@
 	},
 	"permissions":
 	[
-		"storage",
+		"storage"
+	],
+	"host_permissions":
+	[
 		"https://steamdb.info/",
 		"https://store.steampowered.com/",
 		"https://steamcommunity.com/"
 	],
 	"background":
 	{
-		"scripts":
-		[
-			"scripts/background.js"
-		],
-		"persistent": false
+		"service_worker": "scripts/background.js"
 	},
 	"web_accessible_resources":
 	[
