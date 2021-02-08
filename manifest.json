@@ -25,7 +25,9 @@
 		"storage",
 		"https://steamdb.info/",
 		"https://store.steampowered.com/",
-		"https://steamcommunity.com/"
+		"https://steamcommunity.com/",
+		"https://store.steamchina.com/",
+		"https://my.steamchina.com/"
 	],
 	"background":
 	{
@@ -80,7 +82,8 @@
 			"run_at": "document_end",
 			"matches":
 			[
-				"https://store.steampowered.com/*"
+				"https://store.steampowered.com/*",
+				"https://store.steamchina.com/*"
 			],
 			"exclude_matches":
 			[
@@ -92,7 +95,16 @@
 				"https://store.steampowered.com/checkout*",
 				"https://store.steampowered.com/widget/*",
 				"https://store.steampowered.com/account/ackgift*",
-				"https://store.steampowered.com/account/redeemwalletcode*"
+				"https://store.steampowered.com/account/redeemwalletcode*",
+				"https://store.steamchina.com/login/*",
+				"https://store.steamchina.com/join/*",
+				"https://store.steamchina.com/api/*",
+				"https://store.steamchina.com/actions/*",
+				"https://store.steamchina.com/dynamicstore/*",
+				"https://store.steamchina.com/checkout*",
+				"https://store.steamchina.com/widget/*",
+				"https://store.steamchina.com/account/ackgift*",
+				"https://store.steamchina.com/account/redeemwalletcode*"
 			],
 			"js":
 			[
@@ -109,7 +121,8 @@
 		{
 			"matches":
 			[
-				"https://store.steampowered.com/app/*"
+				"https://store.steampowered.com/app/*",
+				"https://store.steamchina.com/app/*"
 			],
 			"js":
 			[
@@ -125,7 +138,8 @@
 			"run_at": "document_end",
 			"matches":
 			[
-				"https://store.steampowered.com/app/*"
+				"https://store.steampowered.com/app/*",
+				"https://store.steamchina.com/app/*"
 			],
 			"js":
 			[
@@ -136,7 +150,8 @@
 		{
 			"matches":
 			[
-				"https://store.steampowered.com/account/licenses*"
+				"https://store.steampowered.com/account/licenses*",
+				"https://store.steamchina.com/account/licenses*"
 			],
 			"js":
 			[
@@ -148,7 +163,8 @@
 			"run_at": "document_end",
 			"matches":
 			[
-				"https://store.steampowered.com/account/registerkey*"
+				"https://store.steampowered.com/account/registerkey*",
+				"https://store.steamchina.com/account/registerkey*"
 			],
 			"js":
 			[
@@ -163,7 +179,8 @@
 		{
 			"matches":
 			[
-				"https://store.steampowered.com/sub/*"
+				"https://store.steampowered.com/sub/*",
+				"https://store.steamchina.com/sub/*"
 			],
 			"js":
 			[
@@ -178,7 +195,8 @@
 		{
 			"matches":
 			[
-				"https://store.steampowered.com/bundle/*"
+				"https://store.steampowered.com/bundle/*",
+				"https://store.steamchina.com/bundle/*"
 			],
 			"js":
 			[
@@ -190,7 +208,8 @@
 			"all_frames": true,
 			"matches":
 			[
-				"https://store.steampowered.com/widget/*"
+				"https://store.steampowered.com/widget/*",
+				"https://store.steamchina.com/widget/*"
 			],
 			"js":
 			[
@@ -205,7 +224,8 @@
 		{
 			"matches":
 			[
-				"https://store.steampowered.com/video/*"
+				"https://store.steampowered.com/video/*",
+				"https://store.steamchina.com/video/*"
 			],
 			"js":
 			[
@@ -222,7 +242,9 @@
 			"matches":
 			[
 				"https://store.steampowered.com/app/*/agecheck",
-				"https://store.steampowered.com/agecheck/*"
+				"https://store.steampowered.com/agecheck/*",
+				"https://store.steamchina.com/app/*/agecheck",
+				"https://store.steamchina.com/agecheck/*"
 			],
 			"js":
 			[
@@ -233,7 +255,8 @@
 		{
 			"matches":
 			[
-				"https://store.steampowered.com/explore*"
+				"https://store.steampowered.com/explore*",
+				"https://store.steamchina.com/explore*"
 			],
 			"js":
 			[
@@ -244,7 +267,8 @@
 		{
 			"matches":
 			[
-				"https://store.steampowered.com/checkout/sendgift/*"
+				"https://store.steampowered.com/checkout/sendgift/*",
+				"https://store.steamchina.com/checkout/sendgift/*"
 			],
 			"js":
 			[
@@ -276,12 +300,15 @@
 			"run_at": "document_end",
 			"matches":
 			[
-				"https://steamcommunity.com/*"
+				"https://steamcommunity.com/*",
+				"https://my.steamchina.com/*"
 			],
 			"exclude_matches":
 			[
 				"https://steamcommunity.com/login/*",
-				"https://steamcommunity.com/miniprofile/*"
+				"https://steamcommunity.com/miniprofile/*",
+				"https://my.steamchina.com/login/*",
+				"https://my.steamchina.com/miniprofile/*"
 			],
 			"js":
 			[
@@ -297,7 +324,9 @@
 			"matches":
 			[
 				"https://steamcommunity.com/id/*",
-				"https://steamcommunity.com/profiles/*"
+				"https://steamcommunity.com/profiles/*",
+				"https://my.steamchina.com/id/*",
+				"https://my.steamchina.com/profiles/*"
 			],
 			"js":
 			[
@@ -313,7 +342,9 @@
 			"matches":
 			[
 				"https://steamcommunity.com/id/*/inventory*",
-				"https://steamcommunity.com/profiles/*/inventory*"
+				"https://steamcommunity.com/profiles/*/inventory*",
+				"https://my.steamchina.com/id/*/inventory*",
+				"https://my.steamchina.com/profiles/*/inventory*"
 			],
 			"js":
 			[
@@ -329,7 +360,9 @@
 			"matches":
 			[
 				"https://steamcommunity.com/id/*/stats*",
-				"https://steamcommunity.com/profiles/*/stats*"
+				"https://steamcommunity.com/profiles/*/stats*",
+				"https://my.steamchina.com/id/*/stats*",
+				"https://my.steamchina.com/profiles/*/stats*"
 			],
 			"js":
 			[
@@ -340,7 +373,8 @@
 		{
 			"matches":
 			[
-				"https://steamcommunity.com/stats/*/achievements*"
+				"https://steamcommunity.com/stats/*/achievements*",
+				"https://my.steamchina.com/stats/*/achievements*"
 			],
 			"js":
 			[
@@ -355,7 +389,8 @@
 		{
 			"matches":
 			[
-				"https://steamcommunity.com/tradeoffer/new*"
+				"https://steamcommunity.com/tradeoffer/new*",
+				"https://my.steamchina.com/tradeoffer/new*"
 			],
 			"js":
 			[
@@ -366,10 +401,12 @@
 		{
 			"matches":
 			[
-				"https://steamcommunity.com/tradeoffer/*"
+				"https://steamcommunity.com/tradeoffer/*",
+				"https://my.steamchina.com/tradeoffer/*"
 			],
 			"exclude_matches":
 			[
+				"https://steamcommunity.com/tradeoffer/*/confirm*",
 				"https://steamcommunity.com/tradeoffer/*/confirm*"
 			],
 			"js":
@@ -382,7 +419,9 @@
 			"matches":
 			[
 				"https://steamcommunity.com/id/*/games*",
-				"https://steamcommunity.com/profiles/*/games*"
+				"https://steamcommunity.com/profiles/*/games*",
+				"https://my.steamchina.com/id/*/games*",
+				"https://my.steamchina.com/profiles/*/games*"
 			],
 			"js":
 			[
@@ -394,7 +433,9 @@
 			"matches":
 			[
 				"https://steamcommunity.com/id/*/recommended/*",
-				"https://steamcommunity.com/profiles/*/recommended/*"
+				"https://steamcommunity.com/profiles/*/recommended/*",
+				"https://my.steamchina.com/id/*/recommended/*",
+				"https://my.steamchina.com/profiles/*/recommended/*"
 			],
 			"js":
 			[
@@ -410,7 +451,9 @@
 			"matches":
 			[
 				"https://steamcommunity.com/id/*/badges*",
-				"https://steamcommunity.com/profiles/*/badges*"
+				"https://steamcommunity.com/profiles/*/badges*",
+				"https://my.steamchina.com/id/*/badges*",
+				"https://my.steamchina.com/profiles/*/badges*"
 			],
 			"js":
 			[
@@ -426,7 +469,9 @@
 			"matches":
 			[
 				"https://steamcommunity.com/id/*/gamecards/*",
-				"https://steamcommunity.com/profiles/*/gamecards/*"
+				"https://steamcommunity.com/profiles/*/gamecards/*",
+				"https://my.steamchina.com/id/*/gamecards/*",
+				"https://my.steamchina.com/profiles/*/gamecards/*"
 			],
 			"js":
 			[
@@ -445,7 +490,12 @@
 				"https://steamcommunity.com/games/*",
 				"https://steamcommunity.com/sharedfiles/filedetails*",
 				"https://steamcommunity.com/workshop/browse*",
-				"https://steamcommunity.com/workshop/discussions*"
+				"https://steamcommunity.com/workshop/discussions*",
+				"https://my.steamchina.com/app/*",
+				"https://my.steamchina.com/games/*",
+				"https://my.steamchina.com/sharedfiles/filedetails*",
+				"https://my.steamchina.com/workshop/browse*",
+				"https://my.steamchina.com/workshop/discussions*"
 			],
 			"js":
 			[
@@ -464,7 +514,11 @@
 				"https://steamcommunity.com/app/*",
 				"https://steamcommunity.com/games/*",
 				"https://steamcommunity.com/sharedfiles/*",
-				"https://steamcommunity.com/workshop/*"
+				"https://steamcommunity.com/workshop/*",
+				"https://my.steamchina.com/app/*",
+				"https://my.steamchina.com/games/*",
+				"https://my.steamchina.com/sharedfiles/*",
+				"https://my.steamchina.com/workshop/*"
 			],
 			"js":
 			[
@@ -478,7 +532,10 @@
 			[
 				"https://steamcommunity.com/market/*",
 				"https://steamcommunity.com/id/*/inventory*",
-				"https://steamcommunity.com/profiles/*/inventory*"
+				"https://steamcommunity.com/profiles/*/inventory*",
+				"https://my.steamchina.com/market/*",
+				"https://my.steamchina.com/id/*/inventory*",
+				"https://my.steamchina.com/profiles/*/inventory*"
 			],
 			"js":
 			[
