@@ -45,6 +45,8 @@ window.addEventListener( 'message', ( request ) =>
 	}
 } );
 
+var myObserver;
+
 GetOption( { 'steamdb-highlight': true }, function( items )
 {
 	if( !items[ 'steamdb-highlight' ] )
@@ -54,6 +56,41 @@ GetOption( { 'steamdb-highlight': true }, function( items )
 
 	const OnDataLoaded = function( data )
 	{
+		
+		const ignoredItemIds = [];
+		for (var key in data.rgIgnoredApps) {
+			ignoredItemIds.push(key);
+		}
+		// console.log("FOOO data was loaded", data);
+		// console.log(ignoredItemIds);
+
+		if (!myObserver) {
+			const callback = () => {
+				var allInstantSearchItems = document.querySelectorAll(".ais-Hits-item");
+				// console.log(allInstantSearchItems);
+				for (var instantSearchItem of allInstantSearchItems) {
+					const aTag = instantSearchItem.children[0];
+					// console.log("aTag: ", aTag);
+					const url = aTag.getAttribute("href");
+					const splitUrl = url.split("/");
+					const itemID = splitUrl[splitUrl.length - 2];
+					// console.log("url: ", url);
+					// console.log("splitUrl: ", splitUrl);
+					// console.log("itemID: ", itemID);
+					if (ignoredItemIds.includes(itemID)) {
+						console.log("removed: ", url, itemID);
+						instantSearchItem.remove();
+						// instantSearchItem.style.outline = '#f00 solid 2px';
+					}
+				}	
+			};
+
+			myObserver = new MutationObserver(callback);
+			const config = { attributes: true, childList: true, subtree: true };
+			myObserver.observe(document, config);	
+		}
+
+
 		window.postMessage( {
 			type: 'steamdb:extension-loaded',
 			data: data,
